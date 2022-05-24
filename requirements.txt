@@ -1,0 +1,8 @@
+aiogram
+timezonefinder[numba]
+aiosqlite
+aioredis
+hiredis
+requests
+folium
+# html2image

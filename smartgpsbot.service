@@ -1,0 +1,22 @@
+#https://github.com/torfsen/python-systemd-tutorial
+# don't forget:
+# $ sudo loginctl enable-linger $USER
+
+[Unit]
+Description=smartgpsbot
+After=network.target
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=30
+#User=dgarkaev
+#Group=dgarkaev
+# Command to execute when the service is started
+#ExecStart=/home/dgarkaev/telegram/bot/smart-qr-bot/env/bin/python3 /home/dgarkaev/telegram/bot/smart-qr-bot/bot.py
+ExecStart=/home/dgarkaev/telegram/bot/smartgpsbot/start_bot.sh
+WorkingDirectory=/home/dgarkaev/telegram/bot/smartgpsbot
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=default.target

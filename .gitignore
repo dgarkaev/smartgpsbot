@@ -1,0 +1,4 @@
+gpstracker.*
+__pycache__/
+.vscode/
+.env
